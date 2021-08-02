@@ -5,16 +5,12 @@ require_relative '../lib/move.rb'
 # create board variable
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-# welcome user, prompt user, get user input
+# welcome user, prompt user, get user input, store user input in local variable & call #input_to_index
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 input = gets.strip
-
-# store user input in local variable, call #input_to_index
 index = input_to_index(input)
 
-# update state of board
+# update state of board, display updated board to user
 move(board, index)
-
-# display updated board to user
 display_board(board)
